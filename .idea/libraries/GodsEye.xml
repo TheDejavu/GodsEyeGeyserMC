@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="GodsEye">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../GodsEye.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

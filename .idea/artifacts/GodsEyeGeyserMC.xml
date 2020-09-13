@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GodsEyeGeyserMC">
+    <output-path>$USER_HOME$/Desktop/Testing server/plugins</output-path>
+    <root id="archive" name="GodsEyeGeyserMC.jar">
+      <element id="module-output" name="GodsEyeGeyserMC" />
+    </root>
+  </artifact>
+</component>

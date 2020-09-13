@@ -1,0 +1,6 @@
+main: me.nort721.geyser.GodsEyeGeyserMC
+version: Build 1
+name: GodsEyeGeyserMC
+author: Nort721
+description: Who would dare to cheat a god
+depend: [GodsEye]
