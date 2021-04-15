@@ -17,11 +17,13 @@ import java.io.File;
 public final class GodsEyeGeyserMC extends JavaPlugin implements Listener {
     Plugin plugin= getServer().getPluginManager().getPlugin("GodsEye");
     YamlConfiguration conf = YamlConfiguration.loadConfiguration(new File(plugin.getDataFolder(), "checks.yml"));
+    int delay = 3;
     @Override
     public void onEnable() {
         Bukkit.getPluginManager().registerEvents(this, this);
+        delay = conf.getInt("Login checks activation delay");
         getLogger().info(getDescription().getName() + " GodsEyeGeyserFixer has been enabled");
-        getLogger().info(getDescription().getName() + " activation delay: " + conf.getInt("Login checks activation delay"));
+        getLogger().info(getDescription().getName() + " activation delay: " + delay);
     }
 
     @Override
@@ -40,6 +42,6 @@ public final class GodsEyeGeyserMC extends JavaPlugin implements Listener {
                     getLogger().info(getDescription().getName() + " added " + e.getPlayer().getName() + " to bypassed players");
                 }
             }
-        }, conf.getInt("Login checks activation delay") * 20L);
+        }, delay * 20L);
     }
 }
