@@ -1,0 +1,6 @@
+name: GodsEyeGeyserMC
+version: ${project.version}
+main: me.nort721.geyser.GodsEyeGeyserMC
+api-version: 1.16
+depend: [ GodsEye, floodgate-bukkit ]
+authors: [ Nort721 ]
