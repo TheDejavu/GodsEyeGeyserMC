@@ -1,6 +1,7 @@
 package me.nort721.geyser;
 
 import lombok.Getter;
+import me.nort721.geyser.listener.FloodgatePlayerJoinListener;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.event.Listener;
@@ -18,7 +19,7 @@ public final class GodsEyeGeyserMC extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
-        Bukkit.getPluginManager().registerEvents(this, this);
+        Bukkit.getPluginManager().registerEvents(new FloodgatePlayerJoinListener(), this);
         GodsEyeGeyserMCAPI.setDelay(conf.getInt("Login checks activation delay"));
         getLogger().info(getDescription().getName() + " GodsEyeGeyserFixer has been enabled");
     }

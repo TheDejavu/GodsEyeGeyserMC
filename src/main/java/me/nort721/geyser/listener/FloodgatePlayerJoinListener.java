@@ -6,9 +6,10 @@ import me.nort721.geyser.GodsEyeGeyserMCAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
-public class FloodgatePlayerJoinListener {
+public class FloodgatePlayerJoinListener implements Listener {
     @EventHandler(priority = EventPriority.LOWEST)
     public void onPlayerJoin(PlayerJoinEvent e) throws GodsEyeException {
         Bukkit.getScheduler().runTaskLater(GodsEyeGeyserMC.getInstance(), new Runnable() {
