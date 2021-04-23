@@ -24,4 +24,8 @@ public class GodsEyeGeyserBypassEvent extends Event implements Cancellable {
     public final HandlerList getHandlers() {
         return handlers;
     }
+
+    public Player getPlayer() {
+        return player;
+    }
 }
