@@ -19,6 +19,7 @@ public final class GodsEyeGeyserMC extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
+        instance = this;
         Bukkit.getPluginManager().registerEvents(new FloodgatePlayerJoinListener(), this);
         GodsEyeGeyserMCAPI.setDelay(conf.getInt("Login checks activation delay"));
         getLogger().info(getDescription().getName() + " GodsEyeGeyserFixer has been enabled");
