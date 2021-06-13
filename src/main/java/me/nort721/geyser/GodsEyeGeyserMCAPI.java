@@ -24,7 +24,7 @@ public class GodsEyeGeyserMCAPI {
             event.setCancelled(true);
             return;
         }
-        if (FloodgateAPI.isBedrockPlayer(player) && GodsEyeAPI.hasProfile(player)) {
+        if (FloodgateApi.getInstance().isFloodgatePlayer(player.getUniqueId()) && GodsEyeAPI.hasProfile(player)) {
             GodsEyeAPI.setBypassed(player, true);
             Bukkit.getLogger().info("[GodsEyeGeyserMC] added " + player.getName() + " to bypassed players");
         }
