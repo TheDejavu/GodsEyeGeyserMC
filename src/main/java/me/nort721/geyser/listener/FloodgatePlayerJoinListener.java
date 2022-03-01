@@ -11,11 +11,12 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 public class FloodgatePlayerJoinListener implements Listener {
     @EventHandler(priority = EventPriority.LOWEST)
-    public void onPlayerJoin(PlayerJoinEvent e) throws GodsEyeException {
-        Bukkit.getScheduler().runTaskLater(GodsEyeGeyserMC.getInstance(), new Runnable() {
-            @Override
-            public void run() {
+    public void onPlayerJoin(PlayerJoinEvent e) {
+        Bukkit.getScheduler().runTaskLater(GodsEyeGeyserMC.getInstance(), () -> {
+            try {
                 GodsEyeGeyserMCAPI.attemptBypassFloodgatePLayer(e.getPlayer());
+            } catch (GodsEyeException ex) {
+                ex.printStackTrace();
             }
         }, GodsEyeGeyserMCAPI.getDelay() * 20L);
     }

@@ -1,5 +1,5 @@
 name: GodsEyeGeyserMC
 version: ${project.version}
 main: me.nort721.geyser.GodsEyeGeyserMC
-depend: [ GodsEye, floodgate-spigot ]
+depend: [ GodsEye, floodgate ]
 authors: [ Nort721 ]

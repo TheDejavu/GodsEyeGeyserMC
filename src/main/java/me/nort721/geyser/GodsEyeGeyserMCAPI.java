@@ -1,12 +1,13 @@
 package me.nort721.geyser;
 
 import godseye.GodsEyeAPI;
+import godseye.GodsEyeException;
 import lombok.Getter;
 import lombok.Setter;
 import me.nort721.geyser.event.GodsEyeGeyserBypassEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
-import org.geysermc.floodgate.FloodgateAPI;
+import org.geysermc.floodgate.api.FloodgateApi;
 
 public class GodsEyeGeyserMCAPI {
 
@@ -14,7 +15,7 @@ public class GodsEyeGeyserMCAPI {
     @Setter
     private static int delay;
 
-    public static void attemptBypassFloodgatePLayer(Player player){
+    public static void attemptBypassFloodgatePLayer(Player player) throws GodsEyeException {
         GodsEyeGeyserBypassEvent event = new GodsEyeGeyserBypassEvent(player);
         Bukkit.getPluginManager().callEvent(event);
         if (event.isCancelled()) {
